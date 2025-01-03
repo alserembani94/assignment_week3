@@ -12,11 +12,12 @@ body {
 
 :root {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --dark: #2A2C2E;
 }
 
 body > div {
   min-height: 100px;
-  border: 1px solid red;
 }
 
 #bestsellers {
@@ -24,7 +25,7 @@ body > div {
   flex-direction: column;
   gap: 32px;
 
-  background-color: #2A2C2E;
+  background-color: var(--dark);
   padding: 44px 24px;
 }
 
@@ -41,13 +42,55 @@ body > div {
 }
 
 .card {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  position: relative;
+
   flex-grow: 1;
 
   background-color: white;
   width: 30%;
   min-width: 200px;
-  height: 200px;
   border-radius: 20px;
+  padding: 16px;
+}
+
+.card-image {
+  width: 120px;
+  height: 184px;
+  background-color: burlywood;
+  border-radius: 16px;
+}
+
+.card-content {
+  flex-grow: 1;
+
+  min-width: 100px;
+}
+
+.card-cta {
+  width: 40px;
+}
+
+.card-cta > button {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 100%;
+  background-color: var(--dark);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.alternative {
+  /* position: absolute; */
+  top: 20px;
+  left: 20px;
+
+  translate: -20px;
 }
 
 .font-mono {
@@ -64,4 +107,8 @@ body > div {
 
 .font-segoi {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.debug {
+  border: 1px solid red;
 }
